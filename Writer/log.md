@@ -16,7 +16,7 @@
 <strong>Link to work</strong>: <a href="https://github.com/cuee26/100-days-of-code/tree/master/Writer">Writer app</a>
 
 ### Day 3: November 21, 2019
-<strong>Today's Progress</strong>: Installed and set up mongodb, created the user models and CRUD routes for user
+<strong>Today's Progress</strong>: Installed and set up mongodb, created the user model and CRUD routes for user
 
 <strong>Thoughts</strong>: I think today's task helped me grasp javascript's OOP better including the folder structure, routing in express and the entire set up in app.js  
 
