@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 require('./models/UsersModel');
+var mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost/local', function(){
     console.log('connected to database!')
 });

@@ -1,5 +1,7 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
+const crypto = require('crypto');
+
 
 class Users {
     constructor(firstName, lastName, email, gender, password, dateOfBirth) {
@@ -13,15 +15,19 @@ class Users {
     }
 
     createSchema() {
-        return users = new Schema({
-            firstName: this.getFirstName(),
-            lastName: this.getLastName(),
-            email: this.getEmail(),
-            gender: this.getGender(),
-            password: this.getPassword(),
-            dateOfBirth: this.getDateOfBirth(),
-            updatedAt: Date.now
+        return new Schema({
+            firstName: String,
+            lastName: String,
+            email: String,
+            gender: String,
+            password: String,
+            dateOfBirth: Date,
+            updatedAt: Date
         });
+    }
+
+    hashPassword() {
+        this.setPassword(crypto.createHash('sha512').update(this.password).digest('hex'));
     }
 }
 
@@ -41,7 +47,6 @@ Users.prototype.setLastName = function (lastName) {
 Users.prototype.getLastName = function () {
     return this.lastName;
 }
-
 
 Users.prototype.setEmail = function (email) {
     this.email = email;
