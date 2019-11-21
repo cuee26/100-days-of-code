@@ -1,0 +1,38 @@
+h1{
+    color: #800020;
+  }
+  
+  button{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #800020;
+    color: white;
+    border-width: 1;
+    border-color: white;
+  
+  }
+  
+  .form_input{
+    width: 40%;
+    height: 20%;
+    border-width: 2px;
+    padding: 5px;
+    margin: 8px;
+  }
+  
+  .form_identifier{
+    margin: 10px;
+  }
+  
+  .form_div{
+    border-width: 1px;
+    width: 50%;
+    border-color: lightgray;
+    position: relative;
+    align-self: center;
+    border-style: solid;
+    padding: 30px;
+    box-shadow: 10px 10px 10px 10px lightgray;
+    margin-right: 60px;
+  }

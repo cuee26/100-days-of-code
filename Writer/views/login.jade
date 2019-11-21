@@ -1,0 +1,13 @@
+extends ./layouts/loginLayout
+include ../public/stylesheets/login.css
+
+block content
+    h1= title
+    div(id="page")
+        div(class="form_div")
+            p(class="form_identifier") Email
+            input(type="email", name="email" class="form_input")
+            p(class="form_identifier") Password
+            input(type="password", name="password", class="form_input")
+            p
+            button(value="Login", name="Login") Login
