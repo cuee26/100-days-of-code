@@ -1,0 +1,38 @@
+Folder structure for the writer app
+  
+|---- bin --- www
+|
+|
+|---- config---FolderStructure.txt
+|               
+|              
+|---- models---|-----UsersModel.js
+|              
+|
+|---- public---|---images------writer.jpg
+|              |               
+|              |
+|              |---javascripts
+|              |
+|              |
+|              |---stylesheets----|---login.css
+|              |                  |---signup.css
+|              |                  |---style.css
+|---- routes---|---index.js
+|              |---login.js           
+|              |---signup.js
+|              |---users.js
+|              |
+|---- views----|---layouts------|---loginLayout.jade
+|              |                |---signupLayout.jade
+|              |
+|              |---error.jade
+|              |---index.jade
+|              |---layout.jade
+|              |---login.jade
+|              |---signup.jade
+|----gitignore
+|----app.js
+|----log.md
+|-package-lock.json
+|---package.json
