@@ -5,6 +5,7 @@ const crypto = require('crypto');
 
 class Users {
     constructor(firstName, lastName, email, gender, password, dateOfBirth) {
+
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -12,6 +13,7 @@ class Users {
         this.password = password;
         this.dateOfBirth = dateOfBirth;
         this.updatedAt = Date.now;
+
     }
 
     createSchema() {
@@ -29,55 +31,55 @@ class Users {
     hashPassword() {
         this.setPassword(crypto.createHash('sha512').update(this.password).digest('hex'));
     }
-}
 
+    setFirstName(firstName) {
+        this.firstName = firstName;
+    }
 
-Users.prototype.setFirstName = function (firstName) {
-    this.firstName = firstName;
-}
+    getFirstName() {
+        return this.firstName;
+    }
 
-Users.prototype.getFirstName = function () {
-    return this.firstName;
-}
+    setLastName(lastName) {
+        this.lastName = lastName
+    }
 
-Users.prototype.setLastName = function (lastName) {
-    this.lastName = lastName
-}
+    getLastName() {
+        return this.lastName;
+    }
 
-Users.prototype.getLastName = function () {
-    return this.lastName;
-}
+    setEmail(email) {
+        this.email = email;
+    }
 
-Users.prototype.setEmail = function (email) {
-    this.email = email;
-}
+    getEmail() {
+        return this.email;
+    }
 
-Users.prototype.getEmail = function () {
-    return this.email;
-}
+    setGender(gender) {
+        this.gender = gender;
+    }
 
-Users.prototype.setGender = function (gender) {
-    this.gender = gender;
-}
+    getGender() {
+        return this.gender;
+    }
 
-Users.prototype.getGender = function () {
-    return this.gender;
-}
+    setDateOfBirth(dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
 
-Users.prototype.setDateOfBirth = function (dateOfBirth) {
-    this.dateOfBirth = dateOfBirth;
-}
+    getDateOfBirth() {
+        return this.dateOfBirth;
+    }
 
-Users.prototype.getDateOfBirth = function () {
-    return this.dateOfBirth;
-}
+    setPassword(password) {
+        this.password = password;
+    }
 
-Users.prototype.setPassword = function (password) {
-    this.password = password;
-}
+    getPassword() {
+        return this.password;
+    }
 
-Users.prototype.getPassword = function () {
-    return this.password;
 }
 
 mongoose.model('UsersModel', new Users("firstName", "lastName", "test@test.com", "Male", "password", "30/01").createSchema());
